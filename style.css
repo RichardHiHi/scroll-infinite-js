@@ -78,6 +78,7 @@ h1 {
 .circle {
     display: flex;
     margin: 20px 0;
+    opacity: 0;
     animation: opacity 0.3 linear;
 }
 
