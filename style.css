@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65%;
+}
+
+body {
+    width: 800px;
+    background-color: rgb(223, 131, 78);
+    color: black;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+.filter {
+    width: 400px;
+    height: 40px;
+    border: none;
+    border-radius: 40px;
+    padding-top: 4px;
+    font-size: 2rem;
+    padding-left: 20px;
+    margin-bottom: 60px;
+    box-shadow: 1px 1px 100px rgb(231, 105, 32);
+}
+
+.filter:focus {
+    outline: none;
+}
+
+.filter::placeholder {
+    font-size: 2rem;
+    line-height: 100%;
+}
+
+.list-post {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.post {
+    position: relative;
+    background-color: rgb(202, 80, 9);
+    padding: 10px;
+    margin: 40px 0;
+    box-shadow: 1px 1px 10px rgb(165, 65, 8);
+}
+
+.post:last-child {
+    margin: 0;
+}
+
+.post-number {
+    position: absolute;
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%)
+}
+
+.circle {
+    display: flex;
+    margin: 20px 0;
+    animation: opacity 0.3 linear;
+}
+
+.circle.show {
+    opacity: 1;
+}
+
+.circle-icon {
+    margin-right: 8px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    animation: bonce 0.5s ease-in infinite;
+}
+
+.circle-icon:nth-of-type(1) {
+    animation-delay: 0.1s
+}
+
+.circle-icon:nth-of-type(2) {
+    animation-delay: 0.2s
+}
+
+@keyframes bonce {
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(-10px)
+    }
+}
